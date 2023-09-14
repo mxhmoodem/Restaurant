@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  
+  header {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 5px 60px;
+    background-color: #212223;
+    position: relative;
+    z-index: 100;
+  }
+  
+  
+  .logo img {
+    width: 190px;
+  }
+  
+  .bookatabledd {
+    display: none;
+  }
+  
+  li#hidden {
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    padding: 5px 25px;
+  }
+  
+
+  nav ul li a{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 20px;
+    list-style-type: none;
+  }
+  
+  nav ul li a:hover {
+    color: rgb(174, 17, 174);
+  }
+  
+  nav ul li a{
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    font-weight: 600;
+  }
+  
+  
+  .toggle-button{
+    width: 35px;
+    position: absolute;
+    right: 40px;
+    top: 45px;
+    display: none;
+    cursor: pointer;
+  }
+  
+  .toggle-button span {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    float: left;
+    margin-bottom: 8px;
+  }
+  
+  .bookatable {
+    color: #fff;
+    background-color: #555556;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1;
+    text-align: center;
+    padding: 9px 6px 8px 8px;
+    transition-duration: 0.6s;
+    transition-timing-function: ease-in-out;
+    letter-spacing: -.3px;
+    cursor: pointer;
+  }
+  
+  .bookatable:hover {
+    cursor: pointer;
+    background-color: #909092;
+    color: white;
+  }
+  
+
+
+body {
+    background-image: url('./Images/backgroundimage1.png');
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.wrapper {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* ... other styles ... */
+    width: 500px;
+    height: 600px;
+    background: transparent;
+    border: 2px solid rgba(225,225,225,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+    padding-bottom: 10px;
+    width: 300px;
+}
+
+.inputbox {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border-bottom: 2px solid #fff;
+    margin: 40px 0;
+}
+
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-weight: bold;
+    pointer-events: none;
+    transition: 0.6s;
+}
+
+
+.inputbox input:focus~label,
+.inputbox input:valid~label {
+    top: -4px;
+}
+
+
+.inputbox input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 0 35px 0 5px;
+}
+
+.inputbox .icon {
+    position: absolute;
+    right: 8px;
+    line-height: 50px;
+}
+
+.time {
+    position: absolute;
+    background: transparent;
+    border: none;
+    width: 250px;
+    bottom: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    left: 3px;
+}
+
+.inputbox option {
+    background: transparent;
+    color: #212223;
+}
+
+#Test_DatetimeLocal label {
+    line-height: 20px;
+}
+
+.inputboxdate {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border-bottom: 2px solid #fff;
+    margin: 40px 0;
+}
+
+.inputboxdate label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-weight: bold;
+    pointer-events: none;
+    transition: 0.6s;
+    top: -4px;
+}
+
+
+.inputboxdate input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 0 35px 0 5px;
+}
+
+.inputboxdate .icon {
+    position: absolute;
+    right: 8px;
+    line-height: 50px;
+}
+
+
+
+.submit {
+    position: absolute;
+    color: #212223;
+    bottom: 10%;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.submit:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+
+/* ---- BREAKPOINTS ---- */
+
+@media (max-width: 1100px) {
+
+    header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        position: relative;
+        justify-content: space-between;
+        padding: 5px 20px 5px;
+    }
+  
+    .logo {
+        align-self: flex-start;
+    }
+    
+    .toggle-button{
+        display: block;
+    }
+    
+    nav{
+        display: none;
+        width: 100%;
+        border-top: 1px solid white;
+        padding-top: 20px 0;
+        margin-top: 10px;
+    }
+  
+    nav ul li{
+        padding: 15px 0px;
+        width: 100%;
+    }
+  
+    nav ul {
+        text-align: center;
+    }
+  
+    nav.show{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+  
+    .bookatable {
+        display: none;
+    }
+  
+    .bookatabledd {
+        display: block;
+    }
+  
+    li#hidden {
+        padding: 15px;
+    }
+  }
